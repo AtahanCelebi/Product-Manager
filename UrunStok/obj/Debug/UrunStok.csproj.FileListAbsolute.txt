@@ -23,3 +23,4 @@ C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.csproj.C
 C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.exe
 C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.pdb
 C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.homePage.resources
+C:\Users\ataha\source\repos\Product-Manager\UrunStok\obj\Debug\UrunStok.homePage2.resources

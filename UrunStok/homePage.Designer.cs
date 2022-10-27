@@ -31,16 +31,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSepet = new System.Windows.Forms.Button();
-            this.txtSepettekiUrunSayisi = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtSepetTutari = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtSepettekiUrunSayisi = new System.Windows.Forms.Label();
+            this.btnSepet = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtFiyatUrun1 = new System.Windows.Forms.Label();
-            this.btn1 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.txtFiyatUrun1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btn2 = new System.Windows.Forms.Button();
             this.txtFiyatUrun2 = new System.Windows.Forms.Label();
@@ -56,11 +63,6 @@
             this.txtFiyatUrun4 = new System.Windows.Forms.Label();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btn5 = new System.Windows.Forms.Button();
             this.txtFiyatUrun5 = new System.Windows.Forms.Label();
@@ -81,15 +83,13 @@
             this.txtFiyatUrun8 = new System.Windows.Forms.Label();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.txtSepetTutari = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -126,33 +126,32 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
+            // label23
             // 
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(618, 51);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(123, 80);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(23, 16);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "TL";
             // 
-            // button1
+            // txtSepetTutari
             // 
-            this.button1.Location = new System.Drawing.Point(5, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Kullanıcı Bilgileri";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtSepetTutari.AutoSize = true;
+            this.txtSepetTutari.Location = new System.Drawing.Point(96, 80);
+            this.txtSepetTutari.Name = "txtSepetTutari";
+            this.txtSepetTutari.Size = new System.Drawing.Size(14, 16);
+            this.txtSepetTutari.TabIndex = 4;
+            this.txtSepetTutari.Text = "0";
             // 
-            // btnSepet
+            // label3
             // 
-            this.btnSepet.Location = new System.Drawing.Point(51, 21);
-            this.btnSepet.Name = "btnSepet";
-            this.btnSepet.Size = new System.Drawing.Size(101, 50);
-            this.btnSepet.TabIndex = 1;
-            this.btnSepet.Text = "Sepet";
-            this.btnSepet.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Sepet Tutarı:";
             // 
             // txtSepettekiUrunSayisi
             // 
@@ -164,14 +163,33 @@
             this.txtSepettekiUrunSayisi.TabIndex = 2;
             this.txtSepettekiUrunSayisi.Text = "0";
             // 
-            // label3
+            // btnSepet
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Sepet Tutarı:";
+            this.btnSepet.Location = new System.Drawing.Point(51, 21);
+            this.btnSepet.Name = "btnSepet";
+            this.btnSepet.Size = new System.Drawing.Size(101, 50);
+            this.btnSepet.TabIndex = 1;
+            this.btnSepet.Text = "Sepet";
+            this.btnSepet.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(5, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 45);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Kullanıcı Bilgileri";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(618, 51);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
             // 
             // richTextBox1
             // 
@@ -195,14 +213,62 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ürünler";
             // 
-            // txtFiyatUrun1
+            // groupBox7
             // 
-            this.txtFiyatUrun1.AutoSize = true;
-            this.txtFiyatUrun1.Location = new System.Drawing.Point(46, 120);
-            this.txtFiyatUrun1.Name = "txtFiyatUrun1";
-            this.txtFiyatUrun1.Size = new System.Drawing.Size(21, 16);
-            this.txtFiyatUrun1.TabIndex = 5;
-            this.txtFiyatUrun1.Text = "29";
+            this.groupBox7.Controls.Add(this.label12);
+            this.groupBox7.Controls.Add(this.button6);
+            this.groupBox7.Controls.Add(this.label13);
+            this.groupBox7.Controls.Add(this.richTextBox5);
+            this.groupBox7.Location = new System.Drawing.Point(6, 198);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(131, 198);
+            this.groupBox7.TabIndex = 8;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "groupBox7";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(73, 120);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(23, 16);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "TL";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(13, 159);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 33);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Sepete Ekle";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(32, 120);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 16);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "234.90";
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Location = new System.Drawing.Point(13, 21);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.Size = new System.Drawing.Size(100, 96);
+            this.richTextBox5.TabIndex = 4;
+            this.richTextBox5.Text = "Kahve 100gr";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(64, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "TL";
             // 
             // btn1
             // 
@@ -214,14 +280,14 @@
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
-            // label5
+            // txtFiyatUrun1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "TL";
+            this.txtFiyatUrun1.AutoSize = true;
+            this.txtFiyatUrun1.Location = new System.Drawing.Point(46, 120);
+            this.txtFiyatUrun1.Name = "txtFiyatUrun1";
+            this.txtFiyatUrun1.Size = new System.Drawing.Size(21, 16);
+            this.txtFiyatUrun1.TabIndex = 5;
+            this.txtFiyatUrun1.Text = "29";
             // 
             // label6
             // 
@@ -366,54 +432,6 @@
             this.groupBox6.Size = new System.Drawing.Size(131, 198);
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(73, 120);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 16);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "TL";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(13, 159);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 33);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Sepete Ekle";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(32, 120);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 16);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "234.90";
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Location = new System.Drawing.Point(13, 21);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(100, 96);
-            this.richTextBox5.TabIndex = 4;
-            this.richTextBox5.Text = "Kahve 100gr";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.label12);
-            this.groupBox7.Controls.Add(this.button6);
-            this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Controls.Add(this.richTextBox5);
-            this.groupBox7.Location = new System.Drawing.Point(6, 198);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(131, 198);
-            this.groupBox7.TabIndex = 8;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "groupBox7";
             // 
             // label14
             // 
@@ -607,24 +625,6 @@
             this.groupBox11.TabIndex = 11;
             this.groupBox11.TabStop = false;
             // 
-            // txtSepetTutari
-            // 
-            this.txtSepetTutari.AutoSize = true;
-            this.txtSepetTutari.Location = new System.Drawing.Point(96, 80);
-            this.txtSepetTutari.Name = "txtSepetTutari";
-            this.txtSepetTutari.Size = new System.Drawing.Size(14, 16);
-            this.txtSepetTutari.TabIndex = 4;
-            this.txtSepetTutari.Text = "0";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(123, 80);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(23, 16);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "TL";
-            // 
             // homePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -648,14 +648,14 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);

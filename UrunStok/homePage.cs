@@ -87,6 +87,13 @@ namespace UrunStok
             urunSayisi++;
             txtSepettekiUrunSayisi.Text = urunSayisi.ToString();
             txtSepetTutari.Text = tutar.ToString();
+
+            
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }

@@ -28,5 +28,11 @@ namespace UrunStok
             homePage homepage = new homePage();
             homepage.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            homePage2 frm = new homePage2();
+            frm.Show();
+        }
     }
 }
