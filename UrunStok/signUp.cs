@@ -37,6 +37,8 @@ namespace UrunStok
 
                     userMngr.CreateUser(user);
                     Clear();
+                    btnSignIn.Enabled = true;
+                    btnSignIn.BackColor = Color.Green;
                     MessageBox.Show("Başarıyla Kayıt Oldunuz", "üyelik oluşturuldu", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }

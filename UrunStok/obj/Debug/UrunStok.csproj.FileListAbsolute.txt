@@ -10,3 +10,15 @@ C:\Users\ataha\source\repos\UrunStok\obj\Debug\UrunStok.csproj.GenerateResource.
 C:\Users\ataha\source\repos\UrunStok\obj\Debug\UrunStok.csproj.CoreCompileInputs.cache
 C:\Users\ataha\source\repos\UrunStok\obj\Debug\UrunStok.exe
 C:\Users\ataha\source\repos\UrunStok\obj\Debug\UrunStok.pdb
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\bin\Debug\UrunStok.exe.config
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\bin\Debug\UrunStok.exe
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\bin\Debug\UrunStok.pdb
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.csproj.AssemblyReference.cache
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.csproj.SuggestedBindingRedirects.cache
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.Form1.resources
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.Properties.Resources.resources
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.signUp.resources
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.csproj.GenerateResource.cache
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.csproj.CoreCompileInputs.cache
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.exe
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.pdb

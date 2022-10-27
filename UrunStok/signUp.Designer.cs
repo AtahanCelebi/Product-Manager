@@ -39,6 +39,7 @@
             this.btnCreateUser = new System.Windows.Forms.Button();
             this.txtNickName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnSignIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -137,11 +138,25 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Nickname";
             // 
+            // btnSignIn
+            // 
+            this.btnSignIn.BackColor = System.Drawing.Color.Red;
+            this.btnSignIn.Enabled = false;
+            this.btnSignIn.Location = new System.Drawing.Point(236, 401);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(75, 23);
+            this.btnSignIn.TabIndex = 11;
+            this.btnSignIn.TabStop = false;
+            this.btnSignIn.Text = "Giriş Yap";
+            this.btnSignIn.UseMnemonic = false;
+            this.btnSignIn.UseVisualStyleBackColor = false;
+            // 
             // signUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 450);
+            this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.txtNickName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCreateUser);
@@ -173,5 +188,6 @@
         private System.Windows.Forms.Button btnCreateUser;
         private System.Windows.Forms.TextBox txtNickName;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnSignIn;
     }
 }
