@@ -22,3 +22,4 @@ C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.csproj.G
 C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.csproj.CoreCompileInputs.cache
 C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.exe
 C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.pdb
+C:\Users\ataha\Source\Repos\Product-Manager\UrunStok\obj\Debug\UrunStok.homePage.resources
