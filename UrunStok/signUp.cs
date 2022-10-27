@@ -89,5 +89,11 @@ namespace UrunStok
             txtPassword.Clear();
             txtPasswordCheck.Clear();
         }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            homePage homepage = new homePage();
+            homepage.Show();
+        }
     }
 }

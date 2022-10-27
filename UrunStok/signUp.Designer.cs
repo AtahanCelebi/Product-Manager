@@ -150,6 +150,7 @@
             this.btnSignIn.Text = "Giriş Yap";
             this.btnSignIn.UseMnemonic = false;
             this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // signUp
             // 

@@ -22,5 +22,11 @@ namespace UrunStok
             signUp f = new signUp();
             f.Show();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            homePage homepage = new homePage();
+            homepage.Show();
+        }
     }
 }
