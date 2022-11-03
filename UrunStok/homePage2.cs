@@ -84,11 +84,15 @@ namespace UrunStok
                 {
                     Button btn = sender as Button;
                     // identify which button was clicked and perform necessary actions
-                    sepettekiUrunSayisi++;
-                    txtSepettekiUrunSayisi.Text = sepettekiUrunSayisi.ToString();
+                    //number of items in the user's bucket
+                    int sepettekiUrunsayisi = Int32.Parse(txtSepettekiUrunSayisi.Text)+1;
+                    txtSepettekiUrunSayisi.Text = sepettekiUrunsayisi.ToString();
+
+                    //exmp: label0 means first product of the product-view page
                     string thePrice = btn.Name.Substring(btn.Name.Length-1);
                     string theLabel = "label" + thePrice;
 
+                    //assign attribute to tags with name dynamically
                     Label lbl_text = this.Controls.Find(theLabel, true).FirstOrDefault() as Label;
                     //You can access 'lbl_text' here...
                     int sepetTutari = Int32.Parse(txtSepetTutari.Text);
