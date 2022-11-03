@@ -24,35 +24,6 @@ namespace UrunStok
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            int y = 0;
-            int x=0;
-            int xPos = 90;
-            int temp = 0;
-            for (int i = 0; i < productNameList.Count; i++)
-            {
-                if (i % 5 == 0)
-                {
-                    y += 150;
-                    temp = 0;
-
-                }
-                RichTextBox newTextBox = new RichTextBox();
-                newTextBox.Location = new Point((xPos) * (temp), -90+y);
-                newTextBox.Size = new Size(75, 95);
-                newTextBox.Text= productNameList[i].ToString();
-                this.Controls.Add(newTextBox);
-
-                Button button = new Button();
-                button.Text = "Sepete Ekle";
-                button.Size = new Size(50, 35);
-                button.Location = new Point((xPos) * (temp), 5+y);
-                this.Controls.Add(button);
-                temp += 1;
-
-            }
-
-
         }
         
         private void homePage2_Load(object sender, EventArgs e)
@@ -72,8 +43,45 @@ namespace UrunStok
                 productStockList.Add(readar1["productStock"].ToString());
                 
             }
-
+            load_products();
             
+        }
+
+        void load_products()
+        {
+            int y = 0;
+            int x = 0;
+            int xPos = 90;
+            int temp = 0;
+            for (int i = 0; i < productNameList.Count; i++)
+            {
+                if (i % 5 == 0)
+                {
+                    y += 190;
+                    temp = 0;
+
+                }
+                RichTextBox newTextBox = new RichTextBox();
+                newTextBox.Location = new Point((xPos) * (temp), -90 + y);
+                newTextBox.Size = new Size(75, 95);
+                newTextBox.Text = productNameList[i].ToString();
+                this.Controls.Add(newTextBox);
+
+                Label newLabel = new Label();
+                newLabel.Location = new Point((xPos+10) * (temp), 10 + y);
+                newLabel.Text= productPriceList[i].ToString();
+                this.Controls.Add(newLabel);
+
+
+                Button button = new Button();
+                button.Text = "Sepete Ekle";
+                button.Name = "btnProduct" + i.ToString();
+                button.Size = new Size(50, 35);
+                button.Location = new Point((xPos) * (temp), 40 + y);
+                this.Controls.Add(button);
+                temp += 1;
+
+            }
         }
     }
 }
