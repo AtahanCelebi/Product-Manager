@@ -17,6 +17,7 @@ namespace UrunStok
         List<string> productNameList = new List<string>();
         List<string> productPriceList = new List<string>();
         List<string> productStockList = new List<string>();
+        int sepettekiUrunSayisi = 0;
         public homePage2()
         {
             InitializeComponent();
@@ -28,7 +29,6 @@ namespace UrunStok
         
         private void homePage2_Load(object sender, EventArgs e)
         {
-            
             SqlConnection conn1 = new SqlConnection("Server=DESKTOP-LKOHK1C;Database=stok;Trusted_Connection=True;");
 
             conn1.Open();
@@ -70,6 +70,7 @@ namespace UrunStok
                 Label newLabel = new Label();
                 newLabel.Location = new Point((xPos+10) * (temp), 10 + y);
                 newLabel.Text= productPriceList[i].ToString();
+                newLabel.Name = "label" + i.ToString();
                 this.Controls.Add(newLabel);
 
 
@@ -78,10 +79,34 @@ namespace UrunStok
                 button.Name = "btnProduct" + i.ToString();
                 button.Size = new Size(50, 35);
                 button.Location = new Point((xPos) * (temp), 40 + y);
+                button.Click += new EventHandler(button_Click);
+                void button_Click(object sender, EventArgs e)
+                {
+                    Button btn = sender as Button;
+                    // identify which button was clicked and perform necessary actions
+                    sepettekiUrunSayisi++;
+                    txtSepettekiUrunSayisi.Text = sepettekiUrunSayisi.ToString();
+                    string thePrice = btn.Name.Substring(btn.Name.Length-1);
+                    string theLabel = "label" + thePrice;
+
+                    Label lbl_text = this.Controls.Find(theLabel, true).FirstOrDefault() as Label;
+                    //You can access 'lbl_text' here...
+                    int sepetTutari = Int32.Parse(txtSepetTutari.Text);
+                    txtSepetTutari.Text = "";
+                    txtSepetTutari.Text += (Int32.Parse(lbl_text.Text)+sepetTutari).ToString();
+
+                }
+                //button.Click += (s, e) => { 
+                //    sepettekiUrunSayisi++;
+                //    txtSepettekiUrunSayisi.Text = sepettekiUrunSayisi.ToString();
+                //    txtSepetTutari.Text = productPriceList[i].ToString();
+                //};
+
                 this.Controls.Add(button);
                 temp += 1;
 
             }
         }
+        
     }
 }
