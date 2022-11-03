@@ -38,18 +38,15 @@ namespace UrunStok
 
                 }
                 RichTextBox newTextBox = new RichTextBox();
-                newTextBox.Location = new Point((xPos) * (temp), 40+y);
+                newTextBox.Location = new Point((xPos) * (temp), -90+y);
                 newTextBox.Size = new Size(75, 95);
                 newTextBox.Text= productNameList[i].ToString();
                 this.Controls.Add(newTextBox);
 
-                
-
-
                 Button button = new Button();
                 button.Text = "Sepete Ekle";
                 button.Size = new Size(50, 35);
-                button.Location = new Point((xPos) * (temp), 135+y);
+                button.Location = new Point((xPos) * (temp), 5+y);
                 this.Controls.Add(button);
                 temp += 1;
 
@@ -69,6 +66,7 @@ namespace UrunStok
             readar1 = cmd1.ExecuteReader();
             while (readar1.Read())
             {
+                //Adding all datas to list from product table
                 productNameList.Add(readar1["productName"].ToString());
                 productPriceList.Add(readar1["productPrice"].ToString());
                 productStockList.Add(readar1["productStock"].ToString());
