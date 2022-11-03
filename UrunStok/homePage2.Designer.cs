@@ -49,6 +49,7 @@
             this.Controls.Add(this.button1);
             this.Name = "homePage2";
             this.Text = "homePage2";
+            this.Load += new System.EventHandler(this.homePage2_Load);
             this.ResumeLayout(false);
 
         }
