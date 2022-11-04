@@ -13,6 +13,8 @@ namespace UrunStok
 {
     public partial class Form1 : Form
     {
+        string get_user_name;
+        string get_password;
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +36,9 @@ namespace UrunStok
         {
             if (checkIfExsist(txtUserName.Text, txtPassword.Text))
             {
+                
                 homePage2 frm = new homePage2();
+                frm.get_userName(get_user_name,get_password);
                 frm.Show();
 
             }
@@ -62,6 +66,9 @@ namespace UrunStok
             {
                 if (userName == readar1["userName"].ToString() && password == readar1["user_password"].ToString())
                 {
+                    get_user_name = userName;
+                    get_password = password;
+
                     return true;
                 }
                 return false;

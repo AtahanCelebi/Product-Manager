@@ -101,6 +101,7 @@
             this.btnSepet.TabIndex = 1;
             this.btnSepet.Text = "Sepet";
             this.btnSepet.UseVisualStyleBackColor = true;
+            this.btnSepet.Click += new System.EventHandler(this.btnSepet_Click);
             // 
             // button1
             // 

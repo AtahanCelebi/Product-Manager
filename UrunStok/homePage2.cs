@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,11 +19,12 @@ namespace UrunStok
         List<string> productPriceList = new List<string>();
         List<string> productStockList = new List<string>();
         int sepettekiUrunSayisi = 0;
+        string currentUserName;
+        string currentPassword;
         public homePage2()
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
         }
@@ -111,6 +113,35 @@ namespace UrunStok
 
             }
         }
-        
+
+        private void btnSepet_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn;
+            SqlDataAdapter adapter;
+            DataTable dt;
+            SqlCommand cmd;
+                conn = new SqlConnection();
+                conn.ConnectionString = "Server=DESKTOP-LKOHK1C;Database=stok;Trusted_Connection=True;";
+
+                cmd = new SqlCommand();
+            cmd.CommandText = "UPDATE userInfo SET kisiSepetTutari=@sepetTutari, kisiSepetUrunSayisi=@urunSayisi WHERE userName=@uName AND user_password=@uPassword";
+                cmd.Parameters.AddWithValue("@sepetTutari", Int32.Parse(txtSepetTutari.Text));
+                cmd.Parameters.AddWithValue("@urunSayisi", Int32.Parse(txtSepettekiUrunSayisi.Text));
+                cmd.Parameters.AddWithValue("@uName", currentUserName);
+                cmd.Parameters.AddWithValue("@uPassword", currentPassword);
+
+            cmd.Connection = conn;
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+            MessageBox.Show("Başarıyla Kayıt Oldunuz", "üyelik oluşturuldu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+        public void get_userName(string userName, string password)
+        {
+            currentUserName = userName;
+            currentPassword = password;
+        }
     }
 }
