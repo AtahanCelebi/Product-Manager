@@ -36,7 +36,12 @@ namespace UrunStok
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (checkIfExsist(txtUserName.Text, txtPassword.Text))
+            if (checkAdmins(txtUserName.Text, txtPassword.Text))
+            {
+                adminPage adminpage = new adminPage();  
+                adminpage.Show();
+            }
+            else if (checkIfExsist(txtUserName.Text, txtPassword.Text))
             {
                 
                 homePage2 frm = new homePage2();
@@ -72,6 +77,33 @@ namespace UrunStok
                     get_password = password;
                     get_sepetTutari = readar1["kisiSepetTutari"].ToString();
                     get_urunSayisi = readar1["kisiSepetUrunSayisi"].ToString();
+
+                    return true;
+                }
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool checkAdmins(string userName, string password)
+        {
+            SqlConnection conn1 = new SqlConnection("Server=DESKTOP-LKOHK1C;Database=stok;Trusted_Connection=True;");
+
+            conn1.Open();
+            SqlCommand cmd1 = new SqlCommand("SELECT adminUserName,adminPassword FROM admins WHERE adminUserName=@nName OR adminPassword=@password", conn1);
+            cmd1.Parameters.AddWithValue("@nName", userName);
+            cmd1.Parameters.AddWithValue("@password", password);
+            SqlDataReader readar1;
+            readar1 = cmd1.ExecuteReader();
+            if (readar1.Read())
+            {
+                if (userName == readar1["adminUserName"].ToString() && password == readar1["adminPassword"].ToString())
+                {
+                    get_user_name = userName;
+                    get_password = password;
 
                     return true;
                 }
