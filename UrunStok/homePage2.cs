@@ -21,6 +21,8 @@ namespace UrunStok
         int sepettekiUrunSayisi = 0;
         string currentUserName;
         string currentPassword;
+        string currentSepetTutari;
+        string currentUrunSayisi;
         public homePage2()
         {
             InitializeComponent();
@@ -138,10 +140,15 @@ namespace UrunStok
             MessageBox.Show("Başarıyla Kayıt Oldunuz", "üyelik oluşturuldu", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-        public void get_userName(string userName, string password)
+        public void get_userName(string userName, string password, string urunTutari,string urunSayisi)
         {
             currentUserName = userName;
             currentPassword = password;
+            currentSepetTutari = urunTutari;
+            currentUrunSayisi = urunSayisi;
+
+            txtSepettekiUrunSayisi.Text = currentUrunSayisi;
+            txtSepetTutari.Text = currentSepetTutari;
         }
     }
 }
