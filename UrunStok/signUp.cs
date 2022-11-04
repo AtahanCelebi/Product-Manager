@@ -92,7 +92,7 @@ namespace UrunStok
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            homePage homepage = new homePage();
+            Form1 homepage = new Form1();
             homepage.Show();
         }
     }

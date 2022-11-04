@@ -23,11 +23,13 @@ namespace UrunStok
         public void CreateUser(UserClass obj)
         {
             cmd = new SqlCommand();
-            cmd.CommandText = "Insert Into userInfo(userName,user_password,email,nickName) Values(@uName,@uPassword,@email,@nick)";
+            cmd.CommandText = "Insert Into userInfo(userName,user_password,email,nickName,kisiSepetTutari,kisiSepetUrunSayisi) Values(@uName,@uPassword,@email,@nick,@sepetTutari,@urunSayisi)";
             cmd.Parameters.AddWithValue("@uName", obj.userName);
             cmd.Parameters.AddWithValue("@uPassword", obj.password);
             cmd.Parameters.AddWithValue("@email", obj.email);
             cmd.Parameters.AddWithValue("@nick", obj.nickName);
+            cmd.Parameters.AddWithValue("@sepetTutari", 0);
+            cmd.Parameters.AddWithValue("@urunSayisi", 0);
 
             cmd.Connection = conn;
             conn.Open();

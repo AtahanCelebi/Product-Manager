@@ -17,6 +17,7 @@ namespace UrunStok
         public string email { get; set; }
 
         public string nickName { get; set; }
+
     }
 
 }
