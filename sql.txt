@@ -30,10 +30,10 @@ INSERT INTO product(productName,productPrice,productStock) VALUES('Kahve',30,100
   INSERT INTO product(productName,productPrice,productStock) VALUES('30lu Yumurta',60,40)
   INSERT INTO product(productName,productPrice,productStock) VALUES('Çikolata',30,100)
   INSERT INTO product(productName,productPrice,productStock) VALUES('Süt',15,35)
-  INSERT INTO product(productName,productPrice,productStock) VALUES('Kahve',90,50)
-  INSERT INTO product(productName,productPrice,productStock) VALUES('Kahve',4,50)
-  INSERT INTO product(productName,productPrice,productStock) VALUES('Kahve',150,30)
-  INSERT INTO product(productName,productPrice,productStock) VALUES('Kahve',3,150)
+  INSERT INTO product(productName,productPrice,productStock) VALUES('Fıstık',90,50)
+  INSERT INTO product(productName,productPrice,productStock) VALUES('Kraker',4,50)
+  INSERT INTO product(productName,productPrice,productStock) VALUES('Tereyağı',150,30)
+  INSERT INTO product(productName,productPrice,productStock) VALUES('Gofret',3,150)
 
 
 create table admins(
