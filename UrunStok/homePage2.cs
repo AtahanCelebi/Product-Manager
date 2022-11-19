@@ -18,6 +18,7 @@ namespace UrunStok
         List<string> productNameList = new List<string>();
         List<string> productPriceList = new List<string>();
         List<string> productStockList = new List<string>();
+        List<string> productIdList = new List<string>();
         int sepettekiUrunSayisi = 0;
         string currentUserName;
         string currentPassword;
@@ -33,16 +34,6 @@ namespace UrunStok
         
         private void homePage2_Load(object sender, EventArgs e)
         {
-            // no smaller than design time size
-            this.MinimumSize = new System.Drawing.Size(this.Width, this.Height);
-
-            // no larger than screen size
-
-            this.AutoSize = true;
-            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-
-            // rest of your code here...
-            
             SqlConnection conn1 = new SqlConnection("Server=DESKTOP-LKOHK1C;Database=stok;Trusted_Connection=True;");
 
             conn1.Open();
@@ -63,6 +54,8 @@ namespace UrunStok
 
         void load_products()
         {
+            int productlocx = 0;
+            int productlocy = 150;
             int y = 0;
             int x = 0;
             int xPos = 90;
@@ -79,6 +72,7 @@ namespace UrunStok
                 newTextBox.Location = new Point((xPos) * (temp), -90 + y);
                 newTextBox.Size = new Size(75, 95);
                 newTextBox.Text = productNameList[i].ToString();
+                string cProductName = productNameList[i].ToString();
                 this.Controls.Add(newTextBox);
 
                 Label newLabel = new Label();
@@ -112,6 +106,19 @@ namespace UrunStok
                     int sepetTutari = Int32.Parse(txtSepetTutari.Text);
                     txtSepetTutari.Text = "";
                     txtSepetTutari.Text += (Int32.Parse(lbl_text.Text)+sepetTutari).ToString();
+
+
+                    //when click the button under the user information add the current product
+                    Button productButton = new Button();
+                    productButton.Text = cProductName;
+                    productButton.Name = "btnozelProduct";
+                    productButton.Size = new Size(75, 30);
+                    productButton.Location = new Point(500,productlocy);
+
+                    
+
+                    this.Controls.Add(productButton);
+                    productlocy += 30;
 
                 }
                 //button.Click += (s, e) => { 
@@ -147,7 +154,7 @@ namespace UrunStok
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
-            MessageBox.Show("Başarıyla Kayıt Oldunuz", "üyelik oluşturuldu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"{txtSepettekiUrunSayisi.Text} adet ürün sepetinize eklendi", "üyelik oluşturuldu", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
         public void get_userName(string userName, string password, string urunTutari,string urunSayisi)
@@ -160,5 +167,6 @@ namespace UrunStok
             txtSepettekiUrunSayisi.Text = currentUrunSayisi;
             txtSepetTutari.Text = currentSepetTutari;
         }
+        
     }
 }

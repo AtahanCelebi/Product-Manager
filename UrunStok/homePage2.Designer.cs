@@ -52,7 +52,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(636, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(152, 563);
+            this.groupBox1.Size = new System.Drawing.Size(152, 184);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
